@@ -25,7 +25,12 @@ ScarfAxisZArg=11
 ScarfPhaseArg=12
 
 //////	Bot specific
-Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerAI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerNI.txt"
+Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
+Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
+
+//Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
 
 // Damage model
 Armor=0 // толщина брони
