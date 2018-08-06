@@ -1,0 +1,67 @@
+Class_name = "CBotCharacter"
+object_name = "BotPilotNPC_A20B"
+
+//////	PhysicsBody properties
+VisualImage=2,"graphics/characters/Pilot_A20B/Pilot2_A20B_%s.mgm",true
+CollisionBody="graphics/characters/Pilot_A20B/Pilot2_A20B.col"
+
+[attach=0]
+	position= 0.2, 0.72, 0
+	object = "LuaScripts/WorldObjects/Bots/BotHead.txt"
+[end]
+
+SoundScript="LuaScripts/Sound/Vehicles/BotSound.cfg"
+
+NeckAngleConstrX=-100,100;
+NeckAngleConstrY=-175.0,175.0;
+NeckAngleConstrZ=-120,120;
+
+NeckSlideConstrX=-0.40,0.40;
+NeckSlideConstrY=-0.45,0.45;
+NeckSlideConstrZ=-0.45,0.45;
+
+ScarfAxisYArg=10
+ScarfAxisZArg=11
+ScarfPhaseArg=12
+
+//////	Bot specific
+Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
+
+// Damage model
+Armor=0 // толщина брони
+LifeRate=300 // жизненный тонус
+LifeRateFg=300 // У бота свой расчет фугасного воздействия
+Firing=1 // Минимальное значение поджигания у средства поражения для зажигания объекта
+DestroyDelay=15 // задержка на удаление объекта после смерти
+MinEjectAlt=10 // ограничение на минимальную высоту выпрыгивания
+
+Animator="graphics/characters/Pilot_A20B/Pilot2_A20B.chr"
+
+//логирование повреждений
+logtreshold=0.005
+
+//// Eject properties ////
+
+EjectDelay=2.3		//	Delay from Eject button press to detaching from plane (sec)
+ParachuteDelay=2	//	Opening parachute delay while free fall (sec)
+MaxParachuteSpeed=60	//	m/s
+
+SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
+
+[Parachute]
+	MaxOpeningTension=40.0f	//	Slings tension while opening parachute (kg)
+
+	MinRad=0.5f
+	MaxRad=3.4f
+	MaxSlings=8.4f
+
+	//MaxRad=2.9f
+	//MaxSlings=6.0f
+
+	SlingsDuration=2.5f
+	PDuration=1
+
+	VisibleParachute="LuaScripts/WorldObjects/Bots/Parachute01.txt"
+
+	SlingsAttach=0.07f,0.5f,0.0f
+[end]

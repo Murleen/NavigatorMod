@@ -1,0 +1,20 @@
+Class_name = "CEjectionPlace"
+object_name = "A20B_P2"
+
+[attach=0]
+	position= 0.2,-0.4,0
+	object = "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B.txt"
+[end]
+
+EntrancePos= 0.2,-0.4,0
+EntranceRot= 0, 0, 0
+EntranceDir=6, -5, 0
+
+DropsArg=100
+HumidityArg=101
+
+FetchCockpitArgs=true	// Fetch animations from sub-commands
+
+CockpitArg = 0000, 0, 00402, 0.5, "smooth_clamp", 0.2, "" // ѕедали - управление по рысканию
+CockpitArg = 1000, 0, 00406, 0.5, "smooth_clamp", 0.1, "med_freq" // –”— / штурвал (т€ги) - управление по тангажу
+CockpitArg = 1000, 1, 00407, 0.5, "smooth_clamp", 0.1, "med_freq" // –”— / штурвал (т€ги) - управление по крену
