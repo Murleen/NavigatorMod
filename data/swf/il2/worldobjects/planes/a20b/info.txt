@@ -42,6 +42,7 @@ id,
 		shortId, 				name,				x,		y,		row|
 1,	,	BotGunner_a20btop,		ostRearGunner,		0.43,	0.5,	-2|
 2,	,	BotGunner_a20brear,		ostBottomGunner,	0.36,	0.68,	 2|
+3,	,	BotPilotNPC_a20b,		ostNose,		0.837,	0.608,	 1|
 
 &stationsWeapons=
 stationId,
