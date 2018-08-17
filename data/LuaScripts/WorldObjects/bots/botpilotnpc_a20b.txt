@@ -6,7 +6,7 @@ VisualImage=2,"graphics/characters/Pilot_A20B/Pilot2_A20B_%s.mgm",true
 CollisionBody="graphics/characters/Pilot_A20B/Pilot2_A20B.col"
 
 [attach=0]
-	position= 0.2, 0.72, 0
+	position= -0.2, 1.15, 0
 	object = "LuaScripts/WorldObjects/Bots/BotHead.txt"
 [end]
 
@@ -29,8 +29,6 @@ Controller="LuaScripts/WorldObjects/Bots/TurretControllerAI.txt"
 Controller="LuaScripts/WorldObjects/Bots/TurretControllerNI.txt"
 Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
 Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
-
-//Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
 
 // Damage model
 Armor=0 // толщина брони

@@ -1,6 +1,20 @@
 Class_name = "CTurret"
 object_name = "A20B_P2"
 
+[COCKPIT_LIMITS]
+x= -0.25, 0.85
+y= -0.4, 5.07
+z= -0.28, 0.28
+[END]
+
+[OPEN_COCKPIT_LIMITS]
+x= -0.25, 0.85
+y= -0.4, 5.07
+z= -0.28, 0.28
+[END]
+
+KeepNetworkImages=true
+
 VisualRadius=2.0
 
 mp_site=true
@@ -9,6 +23,14 @@ mp_site=true
 	position= 0.2,-0.4,0
 	object = "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B.txt"
 [end]
+
+[attach=1]
+	position = 0.0, 0.0, 0.0
+	object = "LuaScripts/WorldObjects/TurretCamera.txt"
+[end]
+
+SightPos = 0.0, 0.2, 0.0
+PositionChangeTime = 1.0
 
 EntrancePos= 0.2,-0.4,0
 EntranceRot= 0, 0, 0
@@ -23,28 +45,41 @@ CockpitArg = 0000, 0, 00402, 0.5, "smooth_clamp", 0.2, "" // Педали - управление
 CockpitArg = 1000, 0, 00406, 0.5, "smooth_clamp", 0.1, "med_freq" // РУС / штурвал (тяги) - управление по тангажу
 CockpitArg = 1000, 1, 00407, 0.5, "smooth_clamp", 0.1, "med_freq" // РУС / штурвал (тяги) - управление по крену
 
+[TurretsPos=0]
+	position = 0.0, 0.0, 0.0
+
+	HMDSingleEye = true
+	LockTurretCamera=false
+
+	defaultDirection = 1.0, 0.0, 0.0
+
+	CamDisplacement = 0.7,0,0
+
+[end]
+
+
 SphereHitProtection=0	//Броневая защита стрелка/пилота от осколков при закрытой кабине
 
 [SphereProtectionBoxOpen]	// Если данный блок есть, то броня пилота от осколков задана по сторонам, если блока нет, то используется общий параметр SphereHitProtection=
-	FovH=30					// Полный угол горизонтального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
-	FovV=30					// Полный угол вертикального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
+	FovH=90					// Полный угол горизонтального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
+	FovV=90					// Полный угол вертикального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
 							// Остальные 5 раструбов определяются автоматически по центральной симметрии относительно переднего
-	ArmorFront=8
-	ArmorBack=2
+	ArmorFront=2
+	ArmorBack=5
 	ArmorTop=2
-	ArmorBottom=2
+	ArmorBottom=5
 	ArmorRight=2
 	ArmorLeft=2
 [end]
 
 [SphereProtectionBoxClose]	// Если данный блок есть, то броня пилота от осколков задана по сторонам, если блока нет, то используется общий параметр SphereHitProtection=
-	FovH=30					// Полный угол горизонтального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
-	FovV=30					// Полный угол вертикального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
+	FovH=90					// Полный угол горизонтального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
+	FovV=90					// Полный угол вертикального раствора пирамидального раструба углов нормали к колижену, по которому грань колижена определяется, как ArmorFront
 							// Остальные 5 раструбов определяются автоматически по центральной симметрии относительно переднего
-	ArmorFront=8
-	ArmorBack=2
+	ArmorFront=2
+	ArmorBack=5
 	ArmorTop=2
-	ArmorBottom=2
+	ArmorBottom=5
 	ArmorRight=2
 	ArmorLeft=2
 [end]
@@ -53,3 +88,11 @@ Armor=0
 LifeRate=50000
 LifeRateFg=5000
 Firing=0.0
+
+CanopyArg=22101
+canopyLockSoundMask=9 	// 0 bit - canopy unlock, start
+						// 1 bit - canopy unlock, end
+						// 2 bit - canopy lock, start
+						// 3 bit - canopy lock, end
+canopytime=9
+NoAimingWhenOpened=true
