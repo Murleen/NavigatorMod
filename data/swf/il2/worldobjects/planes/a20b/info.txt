@@ -1,0 +1,89 @@
+&id=luascripts/worldobjects/planes/a20b.txt
+&order=201
+&model=graphics/planes/a20b/a20b.mgm
+
+&type=1
+
+&isPlayerControlled=1
+&isFighter=0
+&isBomber=1
+&isRecon=0
+&isHydroplane=0
+
+&countriesId=101
+&units=imperial
+
+&cruiseSpeed=350
+&fuel=1484
+&efficiency=0.8
+
+&modifications=
+id,	entityId,			group|
+1,	a20b_FAB100x20,	1|
+2,	a20b_FAB250x4,	1|
+3,	a20b_RPK,		2|
+
+&paintSchemes=
+unlockId,	id|
+1,			a20b/a20b_skin_01.dds|
+2,			a20b/a20b_skin_02.dds|
+3,			a20b/a20b_skin_03.dds|
+4,			a20b/a20b_skin_04.dds|
+5,			a20b/a20b_skin_05.dds|
+6,			a20b/a20b_skin_06.dds|
+7,			a20b/a20b_skin_07.dds|
+8,			a20b/a20b_skin_08.dds|
+9,			a20b/a20b_skin_09.dds|
+10,			a20b/a20b_skin_10.dds|
+
+&stations=
+id,
+	isMain,
+		shortId, 				name,				x,		y,		row|
+1,	,	BotGunner_a20btop,		ostRearGunner,		0.43,	0.5,	-2|
+2,	,	BotGunner_a20brear,		ostBottomGunner,	0.36,	0.68,	 2|
+
+&stationsWeapons=
+stationId,
+	positionId,
+		ammunitionId,
+						positionName,
+											modsOn,	modsOff|
+1,	0,	"0-M230-AP",	ostTop|
+2,	0,	"0-M250-AP",	ostBelly|
+
+&bombsightId=pe2s87
+
+&bombsightInfo=
+"
+&type=common
+&bombsLayerAmountMax=20
+&planeAltitudeMax=9000
+&planeAltitudeMin=400
+&showBombsAmountControl=1
+&showBombsAmountIndicator=1
+&showBombsDoorsControl=1
+&showPlaneAccelerationIndicator=1
+&showPlaneAltitudeControl=1
+&showPlaneAltitudeIndicator=1
+&showPlaneDirectionControl=1
+&showPlaneDirectionIndicator=1
+&showPlaneSpeedControl=1
+&showPlaneSpeedIndicator=1
+&showWindDirectionControl=1
+&showWindSpeedControl=1
+&showAirHorisontIndicator=1
+&showSightModeControl=1
+&showSightAngleControl=1
+&maxf=75
+&maxb=15
+&modeResetBombs=
+id,		inside,	outside|
+0,		1,		0|
+1,		2,		0|
+2,		4,		0|
+3,		99,		0|
+"
+
+
+&characterStuff=greenflare,redflare,whiteflare,yellowflare
