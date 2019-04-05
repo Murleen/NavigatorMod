@@ -13,7 +13,7 @@
 &countriesId=101
 &units=imperial
 
-&cruiseSpeed=350
+&cruiseSpeed=380
 &fuel=1484
 &efficiency=0.8
 
@@ -50,8 +50,8 @@ stationId,
 		ammunitionId,
 						positionName,
 											modsOn,	modsOff|
-1,	0,	"0-M230-AP",	ostTop|
-2,	0,	"0-M250-AP",	ostBelly|
+1,	0,	"0-M250-AP",	ostTop|
+2,	0,	"0-M230-AP",	ostBelly|
 
 &bombsightId=pe2s87
 

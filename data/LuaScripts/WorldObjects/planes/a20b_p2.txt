@@ -32,18 +32,11 @@ mp_site=true
 SightPos = 0.0, 0.2, 0.0
 PositionChangeTime = 1.0
 
+CollisionBody="graphics/planes/Trash/dummy.col"	// палка для того, что бы child персонаж попадал в проверку колижена с пулями
+
 EntrancePos= 0.2,-0.4,0
 EntranceRot= 0, 0, 0
 EntranceDir=6, -5, 0
-
-DropsArg=100
-HumidityArg=101
-
-FetchCockpitArgs=true	// Fetch animations from sub-commands
-
-CockpitArg = 0000, 0, 00402, 0.5, "smooth_clamp", 0.2, "" // ѕедали - управление по рысканию
-CockpitArg = 1000, 0, 00406, 0.5, "smooth_clamp", 0.1, "med_freq" // –”— / штурвал (т€ги) - управление по тангажу
-CockpitArg = 1000, 1, 00407, 0.5, "smooth_clamp", 0.1, "med_freq" // –”— / штурвал (т€ги) - управление по крену
 
 [TurretsPos=0]
 	position = 0.0, 0.0, 0.0
