@@ -1,5 +1,6 @@
 Class_name = "CBotCharacter"
 object_name = "BotPilotNPC_A20B"
+detail_type = "DET_INFANTRY" //list of types is in \inc\SimulationSystem\DetailTypes.inc
 
 //////	PhysicsBody properties
 VisualImage=2,"graphics/characters/Pilot_A20B/Pilot2_A20B_%s.mgm",true
@@ -24,6 +25,11 @@ ScarfAxisYArg=10
 ScarfAxisZArg=11
 ScarfPhaseArg=12
 
+ProtectiveGlassesOnEyesArg=24
+OxygenMaskOnFaceArg=25
+
+energyloss="",true,0.1,10000 // Потеря энергии пули при попадании, true - проверка на входе и выходе в колижн-бокс, первое эквивалентная броня на входе и выходе, второе джоулей на каждый метр пути внутри колижена
+
 //////	Bot specific
 Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
 
@@ -38,7 +44,7 @@ MinEjectAlt=10 // ограничение на минимальную высоту выпрыгивания
 Animator="graphics/characters/Pilot_A20B/Pilot2_A20B.chr"
 
 //логирование повреждений
-logtreshold=0.005
+logtreshold=0.0001
 
 //// Eject properties ////
 
@@ -52,7 +58,7 @@ SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
 	MaxOpeningTension=40.0f	//	Slings tension while opening parachute (kg)
 
 	MinRad=0.5f
-	MaxRad=3.4f
+	MaxRad=4.0f
 	MaxSlings=8.4f
 
 	//MaxRad=2.9f
@@ -65,3 +71,6 @@ SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
 
 	SlingsAttach=0.07f,0.5f,0.0f
 [end]
+
+ImpulseToDestroy = 500		// Определяет силу удара обеъкта об танк, нужную для его уничтожения. Подвижные объекты на 6 категорий по размерам. Автомобили, малые грузовики, большие грузовики, малые танки, средние танки, большие танки.
+ImpulseMinimumLevel = 100		// Определяет минимальную силу удара об танк, нужную для его повреждения. Для пушек снижено что бы их можно было давить.
