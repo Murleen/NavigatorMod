@@ -44,6 +44,14 @@ Firing=1 // Минимальное значение поджигания у средства поражения для зажигания о
 DestroyDelay=15 // задержка на удаление объекта после смерти
 MinEjectAlt=10 // ограничение на минимальную высоту выпрыгивания
 
+RepairSpeed=0.003333	// Скорость исцеления, долей жизни в секунду (полное излечение за 5 минут)
+RepairSource=1	// Тип мастерской, необходимой для исправления
+//	VMRI_REPAIR=0
+//	VMRI_REHEAL=1
+//	VMRI_REARM=2
+//	VMRI_REFUEL=3
+//	VMRI_SERVICEREPAIR=4
+
 Animator="graphics/characters/Pilot_A20B/Pilot2_A20B.chr"
 
 //логирование повреждений
@@ -51,8 +59,9 @@ logtreshold=0.0001
 
 //// Eject properties ////
 
-EjectDelay=2.3		//	Delay from Eject button press to detaching from plane (sec)
-ParachuteDelay=2	//	Opening parachute delay while free fall (sec)
+EjectDelay=2.3, 0.001	//	Delay from Eject button press to detaching from plane (sec), power of bot moving function to eject pos (0.001 - instantly)
+EjectDelay=0.1, 0.001	//	Eject delay for case of negative G ejection
+ParachuteDelay=2		//	Opening parachute delay while free fall (sec)
 MaxParachuteSpeed=60	//	m/s
 
 SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"

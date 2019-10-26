@@ -1,5 +1,5 @@
 &id=luascripts/worldobjects/planes/a20b.txt
-&order=201
+&order=501
 &model=graphics/planes/a20b/a20b.mgm
 
 &type=1
@@ -87,4 +87,4 @@ id,		inside,	outside|
 "
 
 
-&characterStuff=greenflare,redflare,whiteflare,yellowflare
+&characterStuff=greenflare,redflare,whiteflare,yellowflare,photo
