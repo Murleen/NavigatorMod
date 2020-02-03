@@ -83,3 +83,19 @@ SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
 
 ImpulseToDestroy = 500		// Определяет силу удара обеъкта об танк, нужную для его уничтожения. Подвижные объекты на 6 категорий по размерам. Автомобили, малые грузовики, большие грузовики, малые танки, средние танки, большие танки.
 ImpulseMinimumLevel = 100		// Определяет минимальную силу удара об танк, нужную для его повреждения. Для пушек снижено что бы их можно было давить.
+
+GUIHealthMessage=31		// Параметр, определяющий то, какое техночат-сообщение будет для данного бота
+//  1 - Vehicle Driver
+//  4 - Vehicle Commander
+//  7 - Vehicle Gunner
+// 10 - Vehicle Machinegunner
+// 13 - Vehicle Radioman
+// 16 - Vehicle Loader
+// 19 - Vehicle Plugman
+// 22 - Airplane Pilot
+// 25 - Airplane Commander
+// 28 - Airplane Co-Pilot
+// 31 - Airplane Navigator
+// 34 - Airplane Radioman
+// 37 - Airplane Gunner
+// 40 - Airplane Waist Gunner
