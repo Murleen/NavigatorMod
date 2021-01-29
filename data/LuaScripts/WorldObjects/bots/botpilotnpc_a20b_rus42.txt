@@ -1,13 +1,15 @@
 Class_name = "CBotCharacter"
-object_name = "BotPilotNPC_A20B"
+object_name = "BotPilotNPC_A20B_RUS42"
 detail_type = "DET_INFANTRY" //list of types is in \inc\SimulationSystem\DetailTypes.inc
 
 //////	PhysicsBody properties
-VisualImage=2,"graphics/characters/Pilot_A20B/Pilot2_A20B_%s.mgm",true
-CollisionBody="graphics/characters/Pilot_A20B/Pilot2_A20B.col"
+VisualImage=2,"graphics/characters/Pilot_Rus/Pilot_Rus42_su.mgm",true
+CollisionBody="graphics/characters/Pilot_Rus/Pilot_Rus.col"
+Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_PLANE"
+Animator="graphics/Characters/Keyframes/A20B/Pilot2_A20OnField.chr","GOT_NONE"
 
 [attach=0]
-	position= -0.2, 1.15, 0
+	position= 0.2, 0.72, 0
 	object = "LuaScripts/WorldObjects/Bots/BotHead.txt"
 [end]
 
@@ -31,15 +33,16 @@ OxygenMaskOnFaceArg=25
 energyloss="",true,0.1,10000 // Потеря энергии пули при попадании, true - проверка на входе и выходе в колижн-бокс, первое эквивалентная броня на входе и выходе, второе джоулей на каждый метр пути внутри колижена
 
 //////	Bot specific
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerAI.txt"
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerNI.txt"
-Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
-Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
+Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
 
 // Damage model
 Armor=0 // толщина брони
-LifeRate=300 // жизненный тонус
-LifeRateFg=300 // У бота свой расчет фугасного воздействия
+LifeRate=500 // Масштаб пулевых и фугасных повреждений
+LifeRateFrag=1500 // Масштаб осколочных повреждений
+HeadConvexPrefix="Head" // Префикс имени конвекса колижена головы
+HeadArmor=0 // толщина брони головы
+HeadLifeRate=200 // Масштаб пулевых и фугасных повреждений головы
+HeadLifeRateFrag=600 // Масштаб осколочных повреждений головы
 Firing=1 // Минимальное значение поджигания у средства поражения для зажигания объекта
 DestroyDelay=15 // задержка на удаление объекта после смерти
 MinEjectAlt=10 // ограничение на минимальную высоту выпрыгивания
@@ -59,9 +62,9 @@ logtreshold=0.0001
 
 //// Eject properties ////
 
-EjectDelay=2.3, 0.001	//	Delay from Eject button press to detaching from plane (sec), power of bot moving function to eject pos (0.001 - instantly)
+EjectDelay=1.8, 0.001	//	Delay from Eject button press to detaching from plane (sec), power of bot moving function to eject pos (0.001 - instantly)
 EjectDelay=0.1, 0.001	//	Eject delay for case of negative G ejection
-ParachuteDelay=2		//	Opening parachute delay while free fall (sec)
+ParachuteDelay=2	//	Opening parachute delay while free fall (sec)
 MaxParachuteSpeed=60	//	m/s
 
 SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
@@ -79,9 +82,9 @@ SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
 	SlingsDuration=2.5f
 	PDuration=1
 
-	VisibleParachute="LuaScripts/WorldObjects/Bots/Parachute01.txt"
+	VisibleParachute="LuaScripts/WorldObjects/Bots/Parachute01Usaf.txt"
 
-	SlingsAttach=0.07f,0.5f,0.0f
+	SlingsAttach=0.06f,0.6f,0.0f
 [end]
 
 ImpulseToDestroy = 500		// Определяет силу удара обеъкта об танк, нужную для его уничтожения. Подвижные объекты на 6 категорий по размерам. Автомобили, малые грузовики, большие грузовики, малые танки, средние танки, большие танки.

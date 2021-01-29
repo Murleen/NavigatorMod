@@ -87,4 +87,4 @@ id,		inside,	outside|
 "
 
 
-&characterStuff=greenflare,redflare,whiteflare,yellowflare,photo
+&characterStuff=greenflare,redflare,whiteflare,colt1911tankman,photo
