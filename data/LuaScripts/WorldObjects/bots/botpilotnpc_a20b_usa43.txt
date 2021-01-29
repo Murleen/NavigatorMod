@@ -63,6 +63,18 @@ RepairSource=1	// Тип мастерской, необходимой для исправления
 //логирование повреждений
 logtreshold=0.0001
 
+GunInClosedCockpit=true
+
+FlarePath="LuaScripts/WorldObjects/Ballistics/Flare.txt"
+
+gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareRed15.txt",0
+gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareYellow5.txt",1
+gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareWhite15.txt",2
+gun="LuaScripts/WorldObjects/Ballistics/HandGunColtTank.txt",3
+gun="LuaScripts/WorldObjects/Ballistics/HandGunBinocular.txt",4
+
+GunVisArg=30
+
 //// Eject properties ////
 
 EjectDelay=1.8, 0.001	//	Delay from Eject button press to detaching from plane (sec), power of bot moving function to eject pos (0.001 - instantly)

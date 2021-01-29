@@ -38,6 +38,10 @@ Script="LuaScripts\ObjectScripts\AlternateBot.sc"
 	object = "LuaScripts/WorldObjects/TurretCamera.txt"
 [end]
 
+FlarePos= -0.274, 1.011, -0.226
+FlareDir= 0.0, 1.0, 0.0
+FlarePath="LuaScripts/WorldObjects/Ballistics/Flare.txt"
+
 SightPos = 0.0, 0.2, 0.0
 PositionChangeTime = 1.0
 
