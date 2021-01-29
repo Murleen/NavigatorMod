@@ -21,11 +21,11 @@ mp_site=true
 
 // Скрипт замены пилота и параметры для него
 Script="LuaScripts\ObjectScripts\AlternateBot.sc"
-[AlterBot]			//CountryID, fromYYYYMMDD, tillYYYYMMDD, SeasonsList"sp su au wi", BotConfig. Fist match will be choosen.
-	AlterBotConfig = 102, -1, -1, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RAF43.txt"
-	AlterBotConfig = 103, -1, -1, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_USA43.txt"
-	AlterBotConfig = -1, -1, -1, "wi", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RUSwi.txt"
-	AlterBotConfig = -1, -1, 19430228, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RUS42.txt"
+[AlterBot]			//CustomNum, CountryID, fromYYYYMMDD, tillYYYYMMDD, SeasonsList"sp su au wi", BotConfig. Fist match will be choosen.
+	AlterBotConfig = -1, 102, -1, -1, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RAF43.txt"
+	AlterBotConfig = -1, 103, -1, -1, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_USA43.txt"
+	AlterBotConfig = -1, -1, -1, -1, "wi", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RUSwi.txt"
+	AlterBotConfig = -1, -1, -1, 19430228, "", "LuaScripts/WorldObjects/Bots/BotPilotNPC_A20B_RUS42.txt"
 [end]
 
 [attach=0]

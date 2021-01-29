@@ -35,6 +35,12 @@ unlockId,	id|
 8,			a20b/a20b_skin_08.dds|
 9,			a20b/a20b_skin_09.dds|
 10,			a20b/a20b_skin_10.dds|
+11,			a20b/a20b_skin_11.dds|
+12,			a20b/a20b_skin_12.dds|
+13,			a20b/a20b_skin_13.dds|
+14,			a20b/a20b_skin_14.dds|
+15,			a20b/a20b_skin_15.dds|
+16,			a20b/a20b_skin_16.dds|
 
 &stations=
 id,
@@ -88,3 +94,15 @@ id,		inside,	outside|
 
 
 &characterStuff=greenflare,redflare,whiteflare,colt1911tankman,photo
+
+&systemsPad=
+x,															// Позиция ячейки по-горизонтали (допускается дробное значение, например, "1.5")
+		y,													// Позиция ячейки по-вертикали (допускается дробное значение, например, "1.5")
+				id,											// Идентификатор индикатора (список ниже)
+								image,						// Изображение (если не указано, берётся из поля "id")
+										hasOutline|         // Изображение составное, флаг показывает есть ли рамка
+
+0.0,	0.0,	recoverAmmo,    ,       1|
+1.0,	0.0,	recoverFuel,    ,       1|
+0.0,	1.0,	recoverSystems, ,       1|
+1.0,	1.0,	recoverCrew,    ,       1|
