@@ -3,10 +3,11 @@ object_name = "BotPilotNPC_A20B_USA43"
 detail_type = "DET_INFANTRY" //list of types is in \inc\SimulationSystem\DetailTypes.inc
 
 //////	PhysicsBody properties
-VisualImage=2,"graphics/characters/Pilot_USAF/PilotUSAF_%s.mgm",true
+VisualImage=2,"graphics/characters/Pilot_USAF/PilotUSAF_early_%s.mgm",true
 CollisionBody="graphics/characters/Pilot_USAF/PilotUSAF.col"
 Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_PLANE"
 Animator="graphics/Characters/Keyframes/A20B/Pilot2_A20OnField.chr","GOT_NONE"
+kfgroup="a20b"	//Name of used group of keyframes in .txt of .MGM model of the character
 
 [attach=0]
 	position= 0.2, 0.72, 0
@@ -46,16 +47,15 @@ HeadLifeRateFrag=600 // Масштаб осколочных повреждений головы
 Firing=1 // Минимальное значение поджигания у средства поражения для зажигания объекта
 DestroyDelay=15 // задержка на удаление объекта после смерти
 MinEjectAlt=10 // ограничение на минимальную высоту выпрыгивания
+OxygenMaskType=2 // тип кислородной маски: 0 - нет (так же "нет" если кислорода нет в самолете), 1 - мундштук Fokker D.7, 2 - маска WW2
 
-RepairSpeed=0.003333	// Скорость исцеления, долей жизни в секунду (полное излечение за 5 минут)
+RepairSpeed=0.005555	// Скорость исцеления, долей жизни в секунду (полное излечение за 3 минуты)
 RepairSource=1	// Тип мастерской, необходимой для исправления
 //	VMRI_REPAIR=0
 //	VMRI_REHEAL=1
 //	VMRI_REARM=2
 //	VMRI_REFUEL=3
 //	VMRI_SERVICEREPAIR=4
-
-Animator="graphics/characters/Pilot_A20B/Pilot2_A20B.chr"
 
 //логирование повреждений
 logtreshold=0.0001
