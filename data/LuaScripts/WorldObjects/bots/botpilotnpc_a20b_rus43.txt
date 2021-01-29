@@ -9,7 +9,7 @@ Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_PLANE"
 Animator="graphics/Characters/Keyframes/A20B/Pilot2_A20OnField.chr","GOT_NONE"
 
 [attach=0]
-	position= 0.2, 0.72, 0
+	position= -0.2, 1.15, 0
 	object = "LuaScripts/WorldObjects/Bots/BotHead.txt"
 [end]
 
@@ -33,7 +33,10 @@ OxygenMaskOnFaceArg=25
 energyloss="",true,0.1,10000 // Потеря энергии пули при попадании, true - проверка на входе и выходе в колижн-бокс, первое эквивалентная броня на входе и выходе, второе джоулей на каждый метр пути внутри колижена
 
 //////	Bot specific
-Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerAI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerNI.txt"
+Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
+Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
 
 // Damage model
 Armor=0 // толщина брони
