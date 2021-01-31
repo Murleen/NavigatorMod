@@ -37,8 +37,8 @@ OxygenMaskOnFaceArg=25
 energyloss="",true,0.1,10000 // Потеря энергии пули при попадании, true - проверка на входе и выходе в колижн-бокс, первое эквивалентная броня на входе и выходе, второе джоулей на каждый метр пути внутри колижена
 
 //////	Bot specific
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerAI.txt"
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerNI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerTankMG_AI.txt"
+Controller="LuaScripts/WorldObjects/Bots/TurretControllerTankCommander_NI.txt"
 Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
 Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
 
