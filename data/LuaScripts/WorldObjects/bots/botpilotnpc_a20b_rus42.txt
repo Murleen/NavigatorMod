@@ -80,12 +80,12 @@ GunVisArg=30
 
 //// Eject properties ////
 
-EjectDelay=1.8, 0.001	//	Delay from Eject button press to detaching from plane (sec), power of bot moving function to eject pos (0.001 - instantly)
+EjectDelay=1.8, 0.001	//Задержка до детача после начала покидания для определенного [Entrance] (должно соответствовать кол-во), степерь функции перемещения бота (0.001 - instantly)
 EjectDelay=0.1, 0.001	//	Eject delay for case of negative G ejection
 ParachuteDelay=2	//	Opening parachute delay while free fall (sec)
 MaxParachuteSpeed=60	//	m/s
 
-SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray5_1.txt"
+SplashConfig="LuaScripts\WorldObjects\Emitters\WaterSpray1.txt"
 
 [Parachute]
 	MaxOpeningTension=40.0f	//	Slings tension while opening parachute (kg)
