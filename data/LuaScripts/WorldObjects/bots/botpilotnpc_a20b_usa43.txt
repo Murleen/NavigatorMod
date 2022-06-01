@@ -5,7 +5,7 @@ detail_type = "DET_INFANTRY" //list of types is in \inc\SimulationSystem\DetailT
 //////	PhysicsBody properties
 VisualImage=2,"graphics/characters/Pilot_USAF/PilotUSAF_early_%s.mgm",true
 CollisionBody="graphics/characters/Pilot_Rus/Pilot_Rus.col"
-Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_PLANE"
+Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_EJECTION_PLACE"
 Animator="graphics/Characters/Keyframes/A20B/Pilot2_A20OnField.chr","GOT_NONE"
 kfgroup="a20b"	//Name of used group of keyframes in .txt of .MGM model of the character
 
