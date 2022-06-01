@@ -1,0 +1,60 @@
+&id=luascripts/worldobjects/planes/MosquitoFBMkVIs2.txt
+&order=300
+&model=graphics/planes/MosquitoFBMkVIs2/MosquitoFBMkVIs2.mgm
+
+&type=1
+
+&needModForMissionGroundAttack=1
+
+&isPlayerControlled=1
+&isFighter=1
+&isBomber=0
+&isRecon=0
+&isHydroplane=0
+
+&countriesId=102
+&units=imperial
+
+&cruiseSpeed=400
+&fuel=2060
+&efficiency=0.72
+
+&modifications=
+id,	entityId,						group|
+1,	MosquitoFBMkVIs2_57mm_4xMG,		1|
+2,	MosquitoFBMkVIs2_57mm_2xMG,		1|
+3,	MosquitoFBMkVIs2_MKI_Rails,		2|
+4,	MosquitoFBMkVIs2_MKIII_Rails,	2|
+5,	MosquitoFBMkVIs2_MKIIIT_Rails,	2|
+6,	MosquitoFBMkVIs2_MKIIL_Gunsight,3|
+7,	MosquitoFBMkVIs2_25lb_Boost,	4|
+8,	MosquitoFBMkVIs2_Open_Exhaust,	5|
+
+&paintSchemes=
+unlockId,	id,					country|
+1,			MosquitoFBMkVIs2/Dummy.dds|
+
+&stations=id,name
+
+&bombsightInfo=""
+
+
+&characterStuff=greenflare,redflare,whiteflare,colt1911tankman,photo
+
+
+&systemsPad=
+x,															// Позиция ячейки по-горизонтали (допускается дробное значение, например, "1.5")
+		y,													// Позиция ячейки по-вертикали (допускается дробное значение, например, "1.5")
+				id,											// Идентификатор индикатора (список ниже)
+								image,						// Изображение (если не указано, берётся из поля "id")
+										hasOutline|         // Изображение составное, флаг показывает есть ли рамка
+
+0.0,	0.0,	recoverAmmo,    ,       1|
+1.0,	0.0,	recoverFuel,    ,       1|
+0.0,	1.0,	recoverSystems, ,       1|
+1.0,	1.0,	recoverCrew,    ,       1|
+
+&tacticalCodeSpaceAfterCharID=
+countryID,
+		charID|
+-1,		0|

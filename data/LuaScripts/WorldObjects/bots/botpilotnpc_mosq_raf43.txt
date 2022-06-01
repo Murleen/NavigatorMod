@@ -1,16 +1,17 @@
 Class_name = "CBotCharacter"
-object_name = "BotPilotNPC_A20B_USA43"
+object_name = "BotPilotNPC_Mosq_RAF43"
 detail_type = "DET_INFANTRY" //list of types is in \inc\SimulationSystem\DetailTypes.inc
 
 //////	PhysicsBody properties
-VisualImage=2,"graphics/characters/Pilot_USAF/PilotUSAF_early_%s.mgm",true
-CollisionBody="graphics/characters/Pilot_Rus/Pilot_Rus.col"
-Animator="graphics/characters/Keyframes/A20B/Pilot2_A20B.chr","GOT_EJECTION_PLACE"
-Animator="graphics/Characters/Keyframes/A20B/Pilot2_A20OnField.chr","GOT_NONE"
-kfgroup="a20b"	//Name of used group of keyframes in .txt of .MGM model of the character
+VisualImage=2,"graphics/characters/Pilot_Brit/Pilot_Brit_%s.mgm",true
+CollisionBody="graphics/characters/Pilot_Brit/Pilot_Brit.col"
+Animator="graphics/characters/Keyframes/Mosq/Pilot2_Mosq.chr","GOT_EJECTION_PLACE"
+Animator="graphics/Characters/Keyframes/Mosq/Pilot_MosqOnField.chr","GOT_NONE"
+kfgroup="mosq"	//Name of used group of keyframes in .txt of .MGM model of the character
+CloseSphere=0.0,0.0,0.0,0.02	//Overriding default model CloseSphere setting
 
 [attach=0]
-	position= -0.2, 1.15, 0
+	position= 0.2, 0.72, 0 // TODO_Mosq
 	object = "LuaScripts/WorldObjects/Bots/BotHead.txt"
 [end]
 
@@ -34,10 +35,7 @@ OxygenMaskOnFaceArg=25
 energyloss="",true,0.1,10000 // Потеря энергии пули при попадании, true - проверка на входе и выходе в колижн-бокс, первое эквивалентная броня на входе и выходе, второе джоулей на каждый метр пути внутри колижена
 
 //////	Bot specific
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerTankGun_AI.txt"
-Controller="LuaScripts/WorldObjects/Bots/TurretControllerTankCommander_NI.txt"
-Controller="LuaScripts/WorldObjects/Bots/BotController_NI.txt"
-Controller="LuaScripts/WorldObjects/Bots/BotController_AI.txt"
+Controller="LuaScripts/WorldObjects/Bots/Ejector_AI.txt"
 
 // Damage model
 Armor=0 // толщина брони
@@ -63,22 +61,9 @@ RepairSource=1	// Тип мастерской, необходимой для исправления
 //логирование повреждений
 logtreshold=0.0001
 
-GunInClosedCockpit=true
-
-FlarePath="LuaScripts/WorldObjects/Ballistics/Flare.txt"
-
-gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareRed15.txt",0
-gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareYellow5.txt",1
-gun="LuaScripts/WorldObjects/Ballistics/HandGunFlareWhite15.txt",2
-gun="LuaScripts/WorldObjects/Ballistics/HandGunColtTank.txt",3
-gun="LuaScripts/WorldObjects/Ballistics/HandGunBinocular.txt",4
-
-GunVisArg=30
-
 //// Eject properties ////
 
-EjectDelay=1.8, 0.001	//Задержка до детача после начала покидания для определенного [Entrance] (должно соответствовать кол-во), степерь функции перемещения бота (0.001 - instantly)
-EjectDelay=0.1, 0.001	//	Eject delay for case of negative G ejection
+EjectDelay=2.26, 0.001	//Задержка до детача после начала покидания для определенного [Entrance] (должно соответствовать кол-во), степерь функции перемещения бота (0.001 - instantly)
 ParachuteDelay=2	//	Opening parachute delay while free fall (sec)
 MaxParachuteSpeed=60	//	m/s
 
